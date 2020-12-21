@@ -1,0 +1,164 @@
+.scoring-area {
+  width: auto;
+  height: 100%;
+  padding: 2.4rem;
+  overflow-y: auto;
+}
+
+.score-column {
+  width: 36rem;
+  border-radius: 4px;
+}
+
+.score-table {
+  width: 100%;
+  border: solid 2px #333;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.score-table th {
+  width: 17.8rem;
+  height: 100%;
+  line-height: 4rem;
+  text-align: left;
+  white-space: nowrap;
+  padding: 4px 4px 4px 4.2rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  border: solid 1px #333;
+  position: relative;
+  .icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: block;
+    position: absolute;
+    top: 0.8rem;
+    left: 5px;
+  }
+  &.mission-aces .icon {
+    background-image: url(../img/dice-1.png);
+    background-size: contain;
+  }
+  &.mission-twos .icon {
+    background-image: url(../img/dice-2.png);
+    background-size: contain;
+  }
+  &.mission-threes .icon {
+    background-image: url(../img/dice-3.png);
+    background-size: contain;
+  }
+  &.mission-fours .icon {
+    background-image: url(../img/dice-4.png);
+    background-size: contain;
+  }
+  &.mission-fives .icon {
+    background-image: url(../img/dice-5.png);
+    background-size: contain;
+  }
+  &.mission-sixes .icon {
+    background-image: url(../img/dice-6.png);
+    background-size: contain;
+  }
+  &.mission-sixes .icon {
+    background-image: url(../img/dice-6.png);
+    background-size: contain;
+  }
+  &.mission-combination .icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    background-image: url(../img/dice-combi.png);
+    background-size: contain;
+  }
+  &.mission-yahtzee .icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 7px;
+    background-image: url(../img/dice-star.png);
+    background-size: contain;
+  }
+  &.mission-score,
+  &.mission-bonus,
+  &.total-score {
+    padding-left: 0.8rem;
+  }
+  &.turn-number {
+    padding: 0;
+    text-align: center;
+    > span {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.score-table tr {
+  td {
+    width: 9rem;
+    text-align: center;
+    font-weight: 700;
+    height: 4.8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: solid 1px #333;
+    font-size: 2rem;
+    cursor: default;
+  }
+  &.bold-line {
+    border-bottom: solid 2px #333;
+  }
+  &.numberable th {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.score-table.team-1 tr.team-name .team-one,
+.score-table.team-2 tr.team-name .team-two {
+  color: #00a000;
+}
+
+.score-table.team-1 tr.team-name .team-two,
+.score-table.team-2 tr.team-name .team-one {
+  color: #272424;
+  font-weight: 400;
+}
+
+.score-table.team-1 tr.numberable td {
+  &:nth-child(2) {
+    color: #989696;
+    background-color: #f7d7a7;
+    &:not(.filled):hover {
+      cursor: pointer;
+      background-color: rgb(236, 156, 51);
+    }
+  }
+}
+
+.score-table.team-2 tr.numberable td {
+  &:nth-child(3) {
+    color: #989696;
+    background-color: #f7d7a7;
+    &:not(.filled):hover {
+      cursor: pointer;
+      background-color: rgb(236, 156, 51);
+    }
+  }
+}
+
+.score-table tr.numberable td {
+  &.filled:nth-child(2) {
+    color: #dd2626;
+  }
+  &.filled:nth-child(3) {
+    color: #4363e8;
+  }
+}

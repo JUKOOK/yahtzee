@@ -1,0 +1,15 @@
+.explain-area {
+  flex: 1;
+  height: 100%;
+  max-height: 83.8rem;
+  padding: 2.4rem;
+  position: relative;
+}
+
+.explain-wrap {
+  width: 56rem;
+  max-height: 76rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}

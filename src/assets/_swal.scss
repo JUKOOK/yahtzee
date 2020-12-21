@@ -1,0 +1,20 @@
+.swal2-popup.swal2-modal.swal2-show {
+  .swal2-header .swal2-title {
+    font-size: 2.4rem;
+    color: #272424;
+    &.team1-win {
+      color: #dd2626;
+    }
+    &.team2-win {
+      color: #4363e8;
+    }
+  }
+  .swal2-content {
+    height: 3.6rem;
+    .swal2-html-container {
+      font-size: 2rem;
+      color: #272424;
+      font-weight: 600;
+    }
+  }
+}

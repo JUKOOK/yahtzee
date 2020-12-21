@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ScoreArea @game-over="showGameResult" />
+    <ExplainArea />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ScoreArea from "./components/ScoreArea.vue";
+import ExplainArea from "./components/ExplainArea.vue";
+
+import Swal from "sweetalert2";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { ScoreArea, ExplainArea },
+  methods: {
+    showGameResult(team1Total, team2Total) {
+      let title, cls;
+      if (team1Total > team2Total) {
+        title = "1팀 승리!!!";
+        cls = "team1-win";
+      } else if (team2Total > team1Total) {
+        title = "2팀 승리!!!";
+        cls = "team2-win";
+      } else {
+        title = "무승부!!!";
+        cls = "";
+      }
+
+      Swal.fire({
+        title,
+        text: `1팀(${team1Total}) - 2팀(${team2Total})`,
+        width: 540,
+        padding: "0.8rem",
+        showConfirmButton: false,
+        imageUrl:
+          "https://thumbs.gfycat.com/PersonalSoreIbadanmalimbe-size_restricted.gif",
+        imageWidth: 400,
+        imageHeight: 320,
+        imageAlt: "Dice Rain",
+        customClass: {
+          title: cls,
+        },
+      }).then(() => {
+        window.location.reload();
+      });
+    },
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: aliceblue;
 }
 </style>
