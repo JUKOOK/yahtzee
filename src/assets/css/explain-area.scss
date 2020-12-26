@@ -1,16 +1,93 @@
 .explain-area {
   flex: 1;
   height: 100%;
-  max-height: 83.8rem;
-  padding: 2.4rem;
+  max-height: 86.4rem;
+  padding: 4.8rem 2.4rem 2.4rem;
   position: relative;
   z-index: 1;
+  * {
+    border-color: #fff;
+    color: #fff;
+  }
 }
 
 .explain-wrap {
-  width: 56rem;
+  width: calc(100% - 4.8rem);
   max-height: 76rem;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  .title {
+    font-size: 5.2rem;
+    margin: 0 0 5.2rem 2.4rem;
+  }
+}
+
+.explain-wrap.base-category {
+  line-height: 3.6rem;
+  .message {
+    font-size: 2.7rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    > b {
+      font-weight: 500;
+    }
+  }
+}
+
+.explain-wrap.rule-category {
+  .rule-table {
+    width: 112rem;
+    border: solid 2px #faf9f9;
+    border-radius: 4px;
+    overflow: hidden;
+    tr {
+      height: 4.8rem;
+      th {
+        width: 16rem;
+        height: 100%;
+        line-height: 4rem;
+        white-space: nowrap;
+        padding: 4px;
+        font-weight: 600;
+        font-size: 2.3rem;
+        border: solid 1px #faf9f9;
+      }
+      td {
+        text-align: center;
+        font-weight: 500;
+        height: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        border: solid 1px #faf9f9;
+        cursor: default;
+        &.explain {
+          font-size: 2.2rem;
+        }
+        &.score {
+          width: 16.4rem;
+          font-size: 1.8rem;
+        }
+      }
+      &.header {
+        height: 5.6rem;
+        td {
+          font-size: 2.3rem;
+          font-weight: 600;
+        }
+      }
+      &.bold-bottom-line {
+        th,
+        td {
+          border-bottom: solid 4px #faf9f9;
+        }
+      }
+      &.bold-top-line {
+        th,
+        td {
+          border-top: solid 4px #faf9f9;
+        }
+      }
+    }
+  }
 }

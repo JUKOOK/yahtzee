@@ -89,7 +89,7 @@ const calcLargeStr = (dice) => {
     return largeStr ? 30 : 0;
   }
 };
-const calcYahtzee = (dice) => {
+const calcYacht = (dice) => {
   const allEqual = dice.every((v) => v === dice[0]);
   return allEqual && dice[0] !== 0 ? 50 : 0;
 };
@@ -118,7 +118,7 @@ export const calcHelper = (category, dice) => {
       return calcSmallStr(dice);
     case "largeStr":
       return calcLargeStr(dice);
-    case "yahtzee":
-      return calcYahtzee(dice);
+    case "yacht":
+      return calcYacht(dice);
   }
 };

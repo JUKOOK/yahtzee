@@ -7,7 +7,7 @@ const store = new Vuex.Store({
     currentTurn: 1, // 현재 턴 : 1 ~ 12
     currentTeamNum: 1, // 현재 텀을 진행 중인 팀 : 1 or 2
     dice: [0, 0, 0, 0, 0], // 주사위 눈
-    explainCategory: "", // 현재 설명 중인 카테고리
+    explainCategory: "base", // base, rules
   },
   getters: {
     isPlaying(state) {
@@ -24,7 +24,7 @@ const store = new Vuex.Store({
     SET_DICE(state, dice) {
       state.dice = dice;
     },
-    SET_EXPLAIN_TARGET(state, category) {
+    SET_EXPLAIN_CATEGORY(state, category) {
       state.explainCategory = category;
     },
   },

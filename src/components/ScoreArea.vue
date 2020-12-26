@@ -19,9 +19,7 @@
             <td class="team-two">2팀</td>
           </tr>
           <tr id="aces" class="numberable">
-            <th class="mission-aces" @click="SET_EXPLAIN_TARGET('aces')">
-              <span class="icon"></span>Aces
-            </th>
+            <th class="mission-aces"><span class="icon"></span>Aces</th>
             <td
               :class="isFilled(team1, 'aces')"
               @click="applyMScore(team1, 'aces')"
@@ -36,9 +34,7 @@
             </td>
           </tr>
           <tr id="twos" class="numberable">
-            <th class="mission-twos" @click="SET_EXPLAIN_TARGET('twos')">
-              <span class="icon"></span>Twos
-            </th>
+            <th class="mission-twos"><span class="icon"></span>Twos</th>
             <td
               :class="isFilled(team1, 'twos')"
               @click="applyMScore(team1, 'twos')"
@@ -53,9 +49,7 @@
             </td>
           </tr>
           <tr id="threes" class="numberable">
-            <th class="mission-threes" @click="SET_EXPLAIN_TARGET('threes')">
-              <span class="icon"></span>Threes
-            </th>
+            <th class="mission-threes"><span class="icon"></span>Threes</th>
             <td
               :class="isFilled(team1, 'threes')"
               @click="applyMScore(team1, 'threes')"
@@ -70,9 +64,7 @@
             </td>
           </tr>
           <tr id="fours" class="numberable">
-            <th class="mission-fours" @click="SET_EXPLAIN_TARGET('fours')">
-              <span class="icon"></span>Fours
-            </th>
+            <th class="mission-fours"><span class="icon"></span>Fours</th>
             <td
               :class="isFilled(team1, 'fours')"
               @click="applyMScore(team1, 'fours')"
@@ -87,9 +79,7 @@
             </td>
           </tr>
           <tr id="fives" class="numberable">
-            <th class="mission-fives" @click="SET_EXPLAIN_TARGET('fives')">
-              <span class="icon"></span>Fives
-            </th>
+            <th class="mission-fives"><span class="icon"></span>Fives</th>
             <td
               :class="isFilled(team1, 'fives')"
               @click="applyMScore(team1, 'fives')"
@@ -104,9 +94,7 @@
             </td>
           </tr>
           <tr id="sixes" class="bold-line numberable">
-            <th class="mission-sixes" @click="SET_EXPLAIN_TARGET('sixes')">
-              <span class="icon"></span>Sixes
-            </th>
+            <th class="mission-sixes"><span class="icon"></span>Sixes</th>
             <td
               :class="isFilled(team1, 'sixes')"
               @click="applyMScore(team1, 'sixes')"
@@ -122,8 +110,8 @@
           </tr>
           <tr id="missionTotal">
             <th class="mission-score">미션 합</th>
-            <td>{{ team1.missionSum }}</td>
-            <td>{{ team2.missionSum }}</td>
+            <td>{{ team1.missionSum }} / 63</td>
+            <td>{{ team2.missionSum }} / 63</td>
           </tr>
           <tr id="bonus" class="bold-line">
             <th class="mission-bonus">보너스 (+35)</th>
@@ -131,10 +119,7 @@
             <td>{{ getBonusText(team2) }}</td>
           </tr>
           <tr id="choice" class="numberable">
-            <th
-              class="mission-combination"
-              @click="SET_EXPLAIN_TARGET('choice')"
-            >
+            <th class="mission-combination">
               <span class="icon"></span>Choice
             </th>
             <td
@@ -151,11 +136,8 @@
             </td>
           </tr>
           <tr id="four-of-a-kind" class="numberable">
-            <th
-              class="mission-combination"
-              @click="SET_EXPLAIN_TARGET('four-kind')"
-            >
-              <span class="icon"></span>Four of a kind
+            <th class="mission-combination">
+              <span class="icon"></span>4 of a Kind
             </th>
             <td
               :class="isFilled(team1, 'fourKind')"
@@ -171,10 +153,7 @@
             </td>
           </tr>
           <tr id="full-house" class="numberable">
-            <th
-              class="mission-combination"
-              @click="SET_EXPLAIN_TARGET('full-house')"
-            >
+            <th class="mission-combination">
               <span class="icon"></span>Full House
             </th>
             <td
@@ -191,10 +170,7 @@
             </td>
           </tr>
           <tr id="small-straight" class="numberable">
-            <th
-              class="mission-combination"
-              @click="SET_EXPLAIN_TARGET('small-str')"
-            >
+            <th class="mission-combination">
               <span class="icon"></span>S. Straight
             </th>
             <td
@@ -211,10 +187,7 @@
             </td>
           </tr>
           <tr id="large-straight" class="numberable">
-            <th
-              class="mission-combination"
-              @click="SET_EXPLAIN_TARGET('large-str')"
-            >
+            <th class="mission-combination">
               <span class="icon"></span>L. Straight
             </th>
             <td
@@ -230,21 +203,19 @@
               {{ getValueText(team2, "largeStr") }}
             </td>
           </tr>
-          <tr id="yahtzee" class="bold-line numberable">
-            <th class="mission-yahtzee" @click="SET_EXPLAIN_TARGET('yahtzee')">
-              <span class="icon"></span>YAHTZEE
-            </th>
+          <tr id="yacht" class="bold-line numberable">
+            <th class="mission-yacht"><span class="icon"></span>YACHT</th>
             <td
-              :class="isFilled(team1, 'yahtzee')"
-              @click="applyCScore(team1, 'yahtzee')"
+              :class="isFilled(team1, 'yacht')"
+              @click="applyCScore(team1, 'yacht')"
             >
-              {{ getValueText(team1, "yahtzee") }}
+              {{ getValueText(team1, "yacht") }}
             </td>
             <td
-              :class="isFilled(team2, 'yahtzee')"
-              @click="applyCScore(team2, 'yahtzee')"
+              :class="isFilled(team2, 'yacht')"
+              @click="applyCScore(team2, 'yacht')"
             >
-              {{ getValueText(team2, "yahtzee") }}
+              {{ getValueText(team2, "yacht") }}
             </td>
           </tr>
           <tr id="total-score" class="bold-line">
@@ -284,12 +255,7 @@ export default {
     this.team2 = new TeamBoard(2);
   },
   methods: {
-    ...mapMutations([
-      "SET_CURRENT_TURN",
-      "SET_CURRENT_TEAM_NUM",
-      "SET_DICE",
-      "SET_EXPLAIN_TARGET",
-    ]),
+    ...mapMutations(["SET_CURRENT_TURN", "SET_CURRENT_TEAM_NUM", "SET_DICE"]),
     // playing
     processGame() {
       this.SET_DICE([0, 0, 0, 0, 0]);

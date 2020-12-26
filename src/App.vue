@@ -17,21 +17,24 @@ export default {
   components: { ScoreArea, ExplainArea },
   methods: {
     showGameResult(team1Total, team2Total) {
-      let title, cls;
+      let title, text, cls;
       if (team1Total > team2Total) {
         title = "1팀 승리!!!";
+        text = `1팀(${team1Total}) > 2팀(${team2Total})`;
         cls = "team1-win";
       } else if (team2Total > team1Total) {
         title = "2팀 승리!!!";
+        text = `1팀(${team1Total}) < 2팀(${team2Total})`;
         cls = "team2-win";
       } else {
         title = "무승부!!!";
+        text = `1팀(${team1Total}) = 2팀(${team2Total})`;
         cls = "";
       }
 
       Swal.fire({
         title,
-        text: `1팀(${team1Total}) - 2팀(${team2Total})`,
+        text,
         width: 540,
         padding: "0.8rem",
         showConfirmButton: false,
@@ -56,13 +59,12 @@ export default {
   width: 100vw;
   height: 100vh;
   display: flex;
-  background-color: #111;
 }
 
 #app .background-area {
   width: 49rem;
   height: 41.2rem;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   background: url("./assets/img/dices.jpeg") center center no-repeat;

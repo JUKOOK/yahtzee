@@ -2,6 +2,7 @@
   .swal2-header .swal2-title {
     height: 2.8rem;
     font-size: 2.8rem;
+    letter-spacing: 2px;
     color: #272424;
     &.team1-win {
       color: #dd2626;
@@ -15,6 +16,7 @@
     .swal2-html-container {
       line-height: 3.6rem;
       font-size: 2rem;
+      letter-spacing: 1px;
       color: #272424;
       font-weight: 600;
     }

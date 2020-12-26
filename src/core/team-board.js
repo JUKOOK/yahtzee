@@ -20,7 +20,7 @@ export default class TeamBoard {
       fullHouse: null,
       smallStr: null,
       largeStr: null,
-      yahtzee: null,
+      yacht: null,
     };
 
     this._missions = ["aces", "twos", "threes", "fours", "fives", "sixes"];
