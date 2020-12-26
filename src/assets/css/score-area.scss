@@ -3,6 +3,8 @@
   height: 100%;
   padding: 2.4rem;
   overflow-y: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .score-column {
@@ -13,6 +15,8 @@
 .score-table {
   width: 100%;
   border: solid 2px #333;
+  border-radius: 4px;
+  overflow: hidden;
   border-collapse: collapse;
   background-color: #fff;
 }
@@ -89,13 +93,6 @@
   &.total-score {
     padding-left: 0.8rem;
   }
-  &.turn-number {
-    padding: 0;
-    text-align: center;
-    > span {
-      font-size: 2.4rem;
-    }
-  }
 }
 
 .score-table tr {
@@ -117,6 +114,27 @@
     cursor: pointer;
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+.score-table tr.team-name {
+  th,
+  td {
+    padding: 0;
+    height: 7.6rem;
+    text-align: center;
+  }
+  th .turn-number {
+    line-height: 3.2rem;
+    .word {
+      font-size: 2.2rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    .num {
+      font-size: 3.6rem;
+      color: #00a000;
     }
   }
 }

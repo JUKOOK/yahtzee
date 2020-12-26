@@ -8,8 +8,12 @@
       >
         <tbody>
           <tr class="team-name bold-line">
-            <th class="turn-number">
-              <span v-if="currentTurn <= 12"> Turn {{ currentTurn }}/12 </span>
+            <th>
+              <h3 class="turn-number" v-if="currentTurn <= 12">
+                <span class="word">Turn</span>
+                <br />
+                <span class="num"> {{ currentTurn }} / 12</span>
+              </h3>
             </th>
             <td class="team-one">1팀</td>
             <td class="team-two">2팀</td>

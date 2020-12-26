@@ -2,6 +2,7 @@
   <div id="app">
     <ScoreArea @game-over="showGameResult" />
     <ExplainArea />
+    <div class="background-area"></div>
   </div>
 </template>
 
@@ -35,9 +36,9 @@ export default {
         padding: "0.8rem",
         showConfirmButton: false,
         imageUrl:
-          "https://thumbs.gfycat.com/PersonalSoreIbadanmalimbe-size_restricted.gif",
+          "https://phoneky.co.uk/thumbs/screensavers/down/new/misc/dice_bisFS3Go.gif",
         imageWidth: 400,
-        imageHeight: 320,
+        imageHeight: 512,
         imageAlt: "Dice Rain",
         customClass: {
           title: cls,
@@ -55,6 +56,16 @@ export default {
   width: 100vw;
   height: 100vh;
   display: flex;
-  background-color: aliceblue;
+  background-color: #111;
+}
+
+#app .background-area {
+  width: 49rem;
+  height: 41.2rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url("./assets/img/dices.jpeg") center center no-repeat;
+  background-size: cover;
 }
 </style>
