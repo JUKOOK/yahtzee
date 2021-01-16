@@ -17,24 +17,20 @@ export default {
   components: { ScoreArea, ExplainArea },
   methods: {
     showGameResult(team1Total, team2Total) {
-      let title, text, cls;
+      let title, cls;
       if (team1Total > team2Total) {
         title = "1팀 승리!!!";
-        text = `1팀(${team1Total}) > 2팀(${team2Total})`;
         cls = "team1-win";
       } else if (team2Total > team1Total) {
         title = "2팀 승리!!!";
-        text = `1팀(${team1Total}) < 2팀(${team2Total})`;
         cls = "team2-win";
       } else {
         title = "무승부!!!";
-        text = `1팀(${team1Total}) = 2팀(${team2Total})`;
         cls = "";
       }
 
       Swal.fire({
         title,
-        text,
         width: 540,
         padding: "0.8rem",
         showConfirmButton: false,
